@@ -45,11 +45,9 @@ const generateBotResponse = async (incomingMessageDiv) => {
       throw new Error(data.error.message);
     }
 
-    // console.log(data);
     const botResponseText = data.candidates[0].content.parts[0].text
       .replace(/\*\*(.*?)\*\*/g, "$1")
       .trim();
-    // console.log(botResponseText);
     messageElement.innerText = botResponseText;
     chatHistory.push({
       role: "model",
@@ -152,7 +150,6 @@ fileInput.addEventListener("change", (e) => {
       data: base64String,
       mime_type: file.type,
     };
-    // console.log(user);
   };
   reader.readAsDataURL(file);
 });
@@ -160,7 +157,6 @@ fileInput.addEventListener("change", (e) => {
 fileClose.addEventListener("click", () => {
   user.file = {};
   fileUploadWapper.classList.remove("file-uploaded");
-  // fileInput.value = "";
 });
 
 document

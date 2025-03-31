@@ -55,6 +55,11 @@ body.show-chatbot .chatbot-popup {
   font-weight: 600;
 }
 
+.power {
+  color: #ffffffdc;
+  font-size: 0.8rem;
+}
+
 #close-chatbot {
   height: 40px;
   width: 40px;
@@ -144,6 +149,7 @@ body.show-chatbot .chatbot-popup {
 .chat-body .bot-message .thinking .dot:nth-child(3) {
   animation-delay: 0.4s;
 }
+
 @keyframes dotPulse {
   0%,
   44% {
@@ -284,7 +290,7 @@ body.show-chatbot #chatbot-toggler span:last-child {
   opacity: 1;
 }
 
-/* ///////////////////////// */
+/* /////////responsip////////// */
 
 @media (max-width: 520px) {
   #chatbot-toggler {
